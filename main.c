@@ -15,7 +15,9 @@ if(saving_file = fopen("filename", "w+") == NULL) {
 
 };
 //fclose(saving_file);
+#define ARRAY_SIZE(x) (sizeof(x) / sizeof((x)[0]))
 
+#define sizeof_field(t, f) (sizeof(((t*)0)->f))
 
 
 struct board_state {
